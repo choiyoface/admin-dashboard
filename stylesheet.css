@@ -42,7 +42,7 @@ body{
     grid-column: 2 / 4 ;
     grid-row: 1 / 2 ;
     display: flex;
-    font-size: 15px;
+    font-size: 18px;
     align-items: center;
     justify-content: space-between;
     padding:15px 30px;
@@ -66,6 +66,8 @@ body{
     gap:10px;
 
 }
+
+
 .nav{
     grid-column: 2 / 4;
     grid-row: 2 / 3;
@@ -94,7 +96,7 @@ button{
     border-radius: 20px;
     background-color: var(--sidebar-background);
     color: var(--main-text);
-    border: 1px solid var(--main-text);
+    border: none;
     font-size: 15px;
     padding: 5px;
     min-width: 80px;
@@ -106,10 +108,10 @@ button{
     background-color:var(--main-background) ;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     
 }
-#mainheader{
+.mainheader{
     background-color:var(--main-background);
     color: black;
     font-size: 17px;
@@ -125,7 +127,7 @@ button{
     gap:15px;
     column-gap: 25px;
     padding: 15px;
-    justify-content: space-evenly;
+    justify-items: center;
 
 }
 #main article{
@@ -137,9 +139,10 @@ button{
     align-content: center;
     padding: 10px;
     border-radius: 10px;
-    border-top: 5px solid rgb(220, 170, 119) ;
+    border-top: 5px solid var(--sidebar-background) ;
     box-shadow: 5px 5px 5px lightgrey;
     max-width: 300px;
+    transition: transform .5s;
 }
 h4{
     color: var(--main-text);
@@ -158,7 +161,7 @@ h4{
     grid-row: 3 / -1;
     display: flex;
     flex-direction: column;
-    
+    justify-content: space-evenly;
     background-color:var(--main-background) ;
     padding-right: 30px;
 }
@@ -183,6 +186,7 @@ h4{
 }
 .announcement-content h5{
     margin: 0px;
+    font-weight: bold;
 }
 .chats-content{
     background-color: white;
@@ -199,7 +203,7 @@ h4{
     
     
 }
-#chats{
+.chats{
     color: black;
     font-size: 17px;
     font-weight: bold;
@@ -209,4 +213,27 @@ img{
     vertical-align: middle;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+article:hover{
+    opacity: 80%;
+    transform: scale(1.1);
+}
+button:hover{
+    opacity: 80%;
+    transform: scale(1.1);
+}
+.chatname:hover{
+    transform: scale(1.1);
+}
+ul li:hover{
+    opacity: 80%;
+    transform: scale(1.1);
+}
+i:hover{
+    opacity: 80%;
+    transform: scale(1.15);
+}
+.announcement-content div:hover{
+    opacity: 50%;
 }
