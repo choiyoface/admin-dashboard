@@ -12,6 +12,19 @@ body{
     grid-column: 1 / 2;
     grid-row: 1/ -1;
     background-color: #ecfdf5;
+    font-size: 25px;
+    color:#0f766e;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap:30px;
+    justify-content: center;
+    align-items: start;
+    line-height: 1.5;
+}
+.dashboard{
+    font-size: 29px;
+    font-weight: bold;
 }
 .sidebar ul{
     list-style: none;
