@@ -1,6 +1,12 @@
+:root{
+    --main-text: #7d7375;
+    --sidebar-background:#DFE1BE;
+    --main-background:#FFF5ED;
+}
+
 body{
     font-family:"Raleway";
-
+    margin:0px;
 }
 
 .layout{
@@ -11,23 +17,26 @@ body{
 .sidebar{
     grid-column: 1 / 2;
     grid-row: 1/ -1;
-    background-color: #ecfdf5;
-    font-size: 25px;
-    color:#0f766e;
+    background-color: var(--sidebar-background);
+    font-size: 20px;
+    color: var(--main-text);
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     gap:30px;
-    justify-content: center;
-    align-items: start;
+    justify-content: start;
+    align-items: center;
     line-height: 1.5;
+    height: 100vh;
 }
 .dashboard{
-    font-size: 29px;
+    font-size: 25px;
     font-weight: bold;
 }
 .sidebar ul{
     list-style: none;
+    margin: 0px;
+    align-self: flex-start;
 }
 .header{
     grid-column: 2 / 4 ;
@@ -35,17 +44,18 @@ body{
     display: flex;
     font-size: 15px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding:15px 30px;
     
     
 }
 .header input{
-    max-height: 30px;
-    min-width: 300px;
-    border-radius: 8px;
-    flex-grow: 1;
-    border-color: #0f766e;
-    
+    height: 25px;
+    min-width: 400px;
+    border-radius: 10px;
+    flex-grow: 2;
+    border: none;
+    background-color: lightgrey;  
 }
 
 .search,
@@ -60,8 +70,9 @@ body{
     grid-column: 2 / 4;
     grid-row: 2 / 3;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    padding: 0px 30px;
+   
 }
 .main-profile{
     display: flex;
@@ -81,29 +92,40 @@ body{
 }
 button{
     border-radius: 20px;
-    background-color: #ecfdf5;
-    color: #0f766e;
-    border: 1px solid #0f766e;
+    background-color: var(--sidebar-background);
+    color: var(--main-text);
+    border: 1px solid var(--main-text);
     font-size: 15px;
     padding: 5px;
     min-width: 80px;
     
 }
+#main-container{
+    grid-template-columns: 2/ 3;
+    grid-template-rows: 3/ 4;
+    background-color:var(--main-background) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
 #mainheader{
-    background-color: #fef9c3;
+    background-color:var(--main-background);
     color: black;
     font-size: 17px;
     font-weight: bold;
-    padding: 15px 15px 0px 15px ;
+    padding-right: 15px ;
+    padding-left: 15px ;
     
 }
 .main{
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-    background-color: #fef9c3;
+    background-color: var(--main-background);
     gap:15px;
     column-gap: 25px;
     padding: 15px;
+    justify-content: space-evenly;
 
 }
 #main article{
@@ -115,10 +137,12 @@ button{
     align-content: center;
     padding: 10px;
     border-radius: 10px;
-    border-top: 5px solid #a16207 ;
+    border-top: 5px solid rgb(220, 170, 119) ;
+    box-shadow: 5px 5px 5px lightgrey;
+    max-width: 300px;
 }
 h4{
-    color: #713f12;
+    color: var(--main-text);
     font-weight: bold;
     font-size: 20px;
     margin: 5px;
@@ -134,7 +158,9 @@ h4{
     grid-row: 3 / -1;
     display: flex;
     flex-direction: column;
-    background-color:#fef9c3 ;
+    
+    background-color:var(--main-background) ;
+    padding-right: 30px;
 }
 .announcement{
     color: black;
@@ -146,12 +172,14 @@ h4{
 .announcement-content{
     background-color: white;
     border-radius: 10px;
-    margin: 15px;
+    margin: 0px;
+    box-shadow: 5px 5px 5px lightgrey;
 }
 .announcement-content div{
     border-bottom: 1px solid lightgrey;
     background-color: white;
-    margin: 10px;  
+    margin: 10px; 
+    
 }
 .announcement-content h5{
     margin: 0px;
@@ -159,13 +187,15 @@ h4{
 .chats-content{
     background-color: white;
     border-radius: 10px;
-    margin: 15px;
+    margin: 0px;
     padding: 5px;
+    box-shadow: 5px 5px 5px lightgrey;
 }
 .chats-content div{
     border-bottom: 1px solid lightgrey;
     background-color: white;
     margin: 10px; 
+    
     
     
 }
