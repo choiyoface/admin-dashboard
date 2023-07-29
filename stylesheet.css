@@ -5,7 +5,7 @@ body{
 
 .layout{
     display: grid;
-    grid-template: 1fr 1fr 9fr / 1fr 2fr 1fr;
+    grid-template: 1fr 1fr 9fr / .7fr 2.3fr 0.7fr;
 
 }
 .sidebar{
@@ -59,15 +59,70 @@ body{
 .nav{
     grid-column: 2 / 4;
     grid-row: 2 / 3;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.main-profile{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap: 8px;
+}
+.username-big{
+    font-size: 20px;
+    font-weight: bold;
+}
+#nav .nav-buttons{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    
+}
+button{
+    border-radius: 20px;
+    background-color: #ecfdf5;
+    color: #0f766e;
+    border: 1px solid #0f766e;
+    font-size: 15px;
+    padding: 5px;
+    min-width: 80px;
+    
+}
+
+.main{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    background-color: #fef9c3;
+    gap:15px;
+    padding: 15px;
+
+}
+#main article{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    border-top: 5px solid #a16207 ;
+}
+h4{
+    color: #713f12;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+}
+.article-logo{
+    display: flex;
+    align-self:end;
+    gap: 10px;
+    
 }
 .main-sidebar{
     grid-column: 3 / 4 ;
     grid-row: 3 / -1;
 }
-.main{
-    display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
-    background-color: #fef9c3;
-}
-
 
